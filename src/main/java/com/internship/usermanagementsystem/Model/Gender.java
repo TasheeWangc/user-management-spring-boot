@@ -1,13 +1,16 @@
-package com.Internship.User.Management.models;
+package com.internship.usermanagementsystem.Model;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Gender{
+@Table(name = "gender")
+public class Gender {
     // Define Field
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,7 +1,6 @@
-package com.Internship.User.Management.repository;
+package com.internship.usermanagementsystem.Repository;
 
-import com.Internship.User.Management.models.Address;
-import com.Internship.User.Management.models.Gender;
+import com.internship.usermanagementsystem.Model.Gender;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface GenderRepository extends JpaRepository<Gender,Integer> {

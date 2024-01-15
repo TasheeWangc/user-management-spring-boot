@@ -1,9 +1,13 @@
-package com.sdu.usermanagement.service;
+package com.internship.usermanagementsystem.Service;
 
-import java.io.File;
-import java.nio.file.Paths;
-import java.util.List;
-import java.util.stream.Collectors;
+import com.internship.usermanagementsystem.Dto.DepartmentDTO;
+import com.internship.usermanagementsystem.Model.Department;
+import com.internship.usermanagementsystem.Model.DepartmentImage;
+import com.internship.usermanagementsystem.Repository.DepartmentRepository;
+import com.internship.usermanagementsystem.Utility.FileNameGenerator;
+
+import jakarta.transaction.Transactional;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -11,15 +15,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.sdu.usermanagement.dto.DepartmentDTO;
-import com.sdu.usermanagement.model.Department;
-import com.sdu.usermanagement.model.DepartmentImage;
-import com.sdu.usermanagement.repository.DepartmentRepository;
-import com.sdu.usermanagement.utility.FileNameGenerator;
-
-import jakarta.transaction.Transactional;
-
-import lombok.extern.log4j.Log4j2;
+import java.io.File;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -42,9 +41,7 @@ public class DepartmentServiceImpl implements DepartmentService{
 
     @Override
     public ResponseEntity<String> saveDepartment(DepartmentDTO departmentDTO, MultipartFile departmentImageFile) {
-
         try{
-            
             DepartmentImage departmentImage = null;
 
             if(departmentImageFile != null){
@@ -68,19 +65,15 @@ public class DepartmentServiceImpl implements DepartmentService{
                 .deptImagePath(filePath)
                 .build();
                 departmentImageFile.transferTo(new File(filePath));
-
             }
 
             Department department = dtoToEntity(departmentDTO);
             department.setDepartmentImage(departmentImage);
 
-            if(departmentRepository.saveAndFlush(department) == null){
-                log.info("[] returned value");
+            if(departmentRepository.saveAndFlush(department)== null){
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-
             }
             return new ResponseEntity<>(HttpStatus.CREATED);
-            
         }
         catch(Exception e){
             log.error(e.getMessage());

@@ -1,9 +1,11 @@
-package com.sdu.usermanagement.service;
+package com.internship.usermanagementsystem.Service;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import com.internship.usermanagementsystem.Model.ProfileImage;
+import com.internship.usermanagementsystem.Model.User;
+import com.internship.usermanagementsystem.Repository.ProfileImageRepository;
+import com.internship.usermanagementsystem.Repository.UserRepository;
+import com.internship.usermanagementsystem.Utility.FileNameGenerator;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
@@ -12,17 +14,16 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import com.sdu.usermanagement.model.ProfileImage;
-import com.sdu.usermanagement.model.User;
-import com.sdu.usermanagement.repository.ProfileImageRepository;
-import com.sdu.usermanagement.repository.UserRepository;
-import com.sdu.usermanagement.utility.FileNameGenerator;
-import lombok.extern.log4j.Log4j2;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 
 @Service
 @Log4j2
-public class ProfileImageServiceImpl implements ProfileImageServie{
+public class ProfileImageServiceImpl implements ProfileImageService{
 
     @Autowired
     private ProfileImageRepository profileImageRepository;

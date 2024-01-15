@@ -1,14 +1,12 @@
-package com.sdu.usermanagement.dto;
+package com.internship.usermanagementsystem.Dto;
+
+import com.internship.usermanagementsystem.Model.Address;
+import com.internship.usermanagementsystem.Model.Gender;
+import com.internship.usermanagementsystem.Model.ProfileImage;
+import com.internship.usermanagementsystem.Model.Section;
+import lombok.Data;
 
 import java.sql.Date;
-
-
-import com.sdu.usermanagement.model.Address;
-import com.sdu.usermanagement.model.Gender;
-import com.sdu.usermanagement.model.ProfileImage;
-import com.sdu.usermanagement.model.Section;
-
-import lombok.Data;
 
 @Data
 public class UserDTO {

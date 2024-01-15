@@ -1,4 +1,4 @@
-package com.Internship.User.Management.dto;
+package com.internship.usermanagementsystem.Dto;
 
 
 import lombok.AllArgsConstructor;

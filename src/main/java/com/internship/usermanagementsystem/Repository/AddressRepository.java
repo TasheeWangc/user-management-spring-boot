@@ -1,2 +1,7 @@
-package com.internship.usermanagementsystem.Repository;public interface AddressRepository {
+package com.internship.usermanagementsystem.Repository;
+
+import com.internship.usermanagementsystem.Model.Address;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AddressRepository extends JpaRepository<Address,Integer> {
 }

@@ -1,27 +1,16 @@
-package com.sdu.usermanagement.controller;
+package com.internship.usermanagementsystem.Controller;
 
-import java.util.List;
-
+import com.internship.usermanagementsystem.Dto.DepartmentDTO;
+import com.internship.usermanagementsystem.Service.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestPart;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.sdu.usermanagement.dto.DepartmentDTO;
-import com.sdu.usermanagement.service.DepartmentService;
-
+import java.util.List;
 @RestController
 // @RequestMapping("v1/api")
 @RequestMapping("/departments")
-@CrossOrigin(origins = "http://localhost:3000")
 public class DepartmentController {
 // Define request and response endpoint
     @Autowired

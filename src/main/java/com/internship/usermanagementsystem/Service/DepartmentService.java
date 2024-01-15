@@ -1,17 +1,17 @@
-package com.sdu.usermanagement.service;
-import java.util.List;
+package com.internship.usermanagementsystem.Service;
+
+import com.internship.usermanagementsystem.Dto.DepartmentDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.sdu.usermanagement.dto.DepartmentDTO;
-
+import java.util.List;
 
 
 public interface DepartmentService {
 // List all Department
     ResponseEntity<List<DepartmentDTO>> findAllDepartment();
 
-// // Find Department By Id
+// // Find Department By id
     ResponseEntity<DepartmentDTO> findDepartmentById(Integer dept_id);
 
 // Save Department

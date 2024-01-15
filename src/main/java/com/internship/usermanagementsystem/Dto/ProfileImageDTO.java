@@ -1,4 +1,4 @@
-package com.sdu.usermanagement.dto;
+package com.internship.usermanagementsystem.Dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,10 +1,9 @@
-package com.sdu.usermanagement.service;
+package com.internship.usermanagementsystem.Service;
 
-import java.util.List;
-
+import com.internship.usermanagementsystem.Dto.SectionDTO;
 import org.springframework.http.ResponseEntity;
 
-import com.sdu.usermanagement.dto.SectionDTO;
+import java.util.List;
 
 public interface SectionService {
     /* List all Section */
