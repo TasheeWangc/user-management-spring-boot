@@ -11,6 +11,7 @@ import java.util.List;
 @RestController
 // @RequestMapping("v1/api")
 @RequestMapping("/departments")
+@CrossOrigin("*")
 public class DepartmentController {
 // Define request and response endpoint
     @Autowired

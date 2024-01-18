@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/sections")
+@CrossOrigin("*")
 public class SectionController {
     @Autowired
     private SectionService sectionService;

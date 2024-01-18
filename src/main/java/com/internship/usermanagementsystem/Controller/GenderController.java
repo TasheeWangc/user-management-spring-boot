@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/genders")
+@CrossOrigin("*")
 public class GenderController {
     // Define request and response endpoint
     @Autowired

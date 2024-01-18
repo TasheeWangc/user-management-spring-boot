@@ -8,6 +8,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/profile_images")
+@CrossOrigin("*")
 public class ProfileImageController {
     
     @Autowired

@@ -8,6 +8,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/department_images")
+@CrossOrigin("*")
 public class DepartmentImageController {
 
     @Autowired
