@@ -11,7 +11,6 @@ import java.util.List;
 @RestController
 // @RequestMapping("v1/api")
 @RequestMapping("/departments")
-@CrossOrigin("*")
 public class DepartmentController {
 // Define request and response endpoint
     @Autowired
@@ -39,7 +38,7 @@ public class DepartmentController {
     }
     
 
-// Retrieve Single Department By Id
+// Retrieve Single Department By id
     @GetMapping("/{dept_id}")
     private ResponseEntity<DepartmentDTO> getDepartmentById(@PathVariable Integer dept_id){
         return departmentService.findDepartmentById(dept_id);
